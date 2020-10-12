@@ -5,6 +5,8 @@ import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 import { menubar } from 'menubar'
 import { join } from 'path'
+import './store'
+
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -52,7 +54,10 @@ app.on('ready', async () => {
       browserWindow: {
           alwaysOnTop: true,
           minWidth: 360,
-          maxWidth: 360
+          maxWidth: 360,
+          webPreferences: {
+            nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
+          }
       },
       icon: join(__static, '../src/assets/MenubarIcon.png'),
   })
