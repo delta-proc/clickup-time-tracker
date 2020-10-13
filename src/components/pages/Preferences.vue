@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="save">
     <Header>
-      <h1 class="text-l font-medium leading-7 tracking-wide text-gray-100 truncate">Preferences</h1>
+      <h1 class="text-l font-medium italic leading-7 tracking-wide text-gray-100 truncate">Preferences</h1>
 
       <template v-slot:controls>
         <Button type="submit">
