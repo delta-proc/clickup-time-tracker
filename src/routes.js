@@ -8,8 +8,20 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
     routes: [
-        { path: '/', component: Tracking },
-        { path: '/tasks', component: Tasks },
-        { path: '/preferences', component: Preferences },
+        {
+            path: '/',
+            name: 'tracking',
+            component: Tracking
+        },
+        {
+            path: '/tasks',
+            name: 'tasks',
+            component: Tasks
+        },
+        {
+            path: '/preferences',
+            name: 'preferences',
+            component: Preferences
+        }
     ]
 })
