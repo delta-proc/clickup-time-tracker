@@ -1,5 +1,5 @@
 <template>
-    <router-view />
+    <router-view class="flex flex-col min-h-screen"/>
 </template>
 
 <script>
