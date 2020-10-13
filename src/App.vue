@@ -15,4 +15,5 @@ export default {
 }
 </script>
 
+<style src="./assets/fonts.css"></style>
 <style src="./assets/tailwind.css"></style>
