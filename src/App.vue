@@ -1,18 +1,9 @@
 <template>
-  <div id="app">
-    <Preferences />
-  </div>
+    <router-view />
 </template>
 
 <script>
-import Preferences from './components/Preferences.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Preferences
-  }
-}
+export default { name: 'App' }
 </script>
 
 <style src="./assets/fonts.css"></style>

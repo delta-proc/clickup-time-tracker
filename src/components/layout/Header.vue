@@ -2,7 +2,7 @@
   <div class="px-3 py-2 bg-gray-800">
     <div class="flex items-center justify-between">
       <div class="flex-1 min-w-0">
-        <h1 v-show="title" class="text-l font-medium leading-7 tracking-wide text-white sm:text-3xl sm:leading-9 sm:truncate">
+        <h1 v-show="title" class="text-l font-medium leading-7 tracking-wide text-white truncate">
           {{ title }}
         </h1>
       </div>

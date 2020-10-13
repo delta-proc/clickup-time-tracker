@@ -35,13 +35,13 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
-import Header from "./layout/Header";
-import InputGroup from "./input/Group";
-import InputText from "./input/Text";
-import Button from "./input/Button";
+import Header from "./../layout/Header";
+import InputGroup from "./../input/Group";
+import InputText from "./../input/Text";
+import Button from "./../input/Button";
 
-import IconQuestionmark from "./icons/Questionmark";
-import IconSave from "./icons/Save";
+import IconQuestionmark from "./../icons/Questionmark";
+import IconSave from "./../icons/Save";
 
 export default {
   name: "Preferences",
