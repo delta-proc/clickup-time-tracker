@@ -1,10 +1,13 @@
 <template>
   <form @submit.prevent="save">
-    <Header title="Preferences">
-      <Button type="submit">
-        <IconSave width="18" class="mr-1.5" />
-        Save
-      </Button>
+    <Header>
+      <h1 class="text-l font-medium leading-7 tracking-wide text-gray-100 truncate">Preferences</h1>
+
+      <template v-slot:controls>
+        <Button type="submit">
+          <IconSave width="18" class="mr-1.5" /> Save
+        </Button>
+      </template>
     </Header>
 
     <div class="p-3">
@@ -18,11 +21,7 @@
           <button
             type="button"
             class="text-blue-500"
-            v-on:click="
-              require('electron').shell.openExternal(
-                'https://jsapi.apiary.io/apis/clickup20/introduction/authentication.html'
-              )
-            "
+            v-on:click="require('electron').shell.openExternal('https://jsapi.apiary.io/apis/clickup20/introduction/authentication.html')"
           >
             Here's how to obtain a personal API token
           </button>
@@ -65,6 +64,7 @@ export default {
   methods: {
     save() {
       this.setToken(this.token);
+      this.$router.push({ name: 'tracking' })
     },
 
     ...mapActions(["setToken"]),

@@ -1,20 +1,25 @@
 <template>
     <div>
-      <Header title="Tasks">
-        <router-link class="p-1" to="preferences">
-          <IconCog width="20" class="text-white" />
-        </router-link>
+      <Header>
+        <MainNavigation />
+
+        <template v-slot:controls>
+          <router-link class="p-1" :to="{ name: 'preferences' }">
+            <IconCog width="20" class="text-white" />
+          </router-link>
+        </template>
       </Header>
 
-        <Bordered class="flex flex-col items-center justify-center">
-            <h2 class="text-xl text-gray-600">All done! <span class="text-2xl">🎉</span></h2>
-        </Bordered>
+      <Bordered class="flex flex-col items-center justify-center">
+        <h2 class="text-xl text-gray-600">All done! <span class="text-2xl">🎉</span></h2>
+      </Bordered>
     </div>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
 
+import MainNavigation from "./../layout/MainNavigation";
 import Header from "./../layout/Header";
 import Bordered from "./../layout/Bordered";
 import IconCog from "./../icons/Cog";
@@ -22,6 +27,7 @@ import IconCog from "./../icons/Cog";
 export default {
   name: "Tracking",
   components: {
+    MainNavigation,
     Header,
     Bordered,
     IconCog
