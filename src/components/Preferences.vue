@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <form @submit.prevent="save">
     <Header title="Preferences">
-      <Button @click="save">
+      <Button type="submit">
         <IconSave width="18" class="mr-1.5" />
         Save
       </Button>
     </Header>
 
-    <form @submit.prevent="save" class="p-3">
+    <div class="p-3">
       <InputGroup label="Personal Token">
         <InputText v-model="token" add-on="pk_" />
 
@@ -18,14 +18,18 @@
           <button
             type="button"
             class="text-blue-500"
-            v-on:click="require('electron').shell.openExternal('https://jsapi.apiary.io/apis/clickup20/introduction/authentication.html')"
+            v-on:click="
+              require('electron').shell.openExternal(
+                'https://jsapi.apiary.io/apis/clickup20/introduction/authentication.html'
+              )
+            "
           >
             Here's how to obtain a personal API token
           </button>
         </span>
       </InputGroup>
-    </form>
-  </div>
+    </div>
+  </form>
 </template>
 
 <script>
@@ -51,7 +55,7 @@ export default {
   },
 
   data: () => ({
-    token: ''
+    token: "",
   }),
 
   mounted() {
@@ -59,7 +63,6 @@ export default {
   },
 
   methods: {
-
     save() {
       this.setToken(this.token);
     },
