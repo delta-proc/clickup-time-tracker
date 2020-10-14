@@ -43,33 +43,33 @@ import IconQuestionmark from "./../icons/Questionmark";
 import IconSave from "./../icons/Save";
 
 export default {
-  name: "Preferences",
-  components: {
-    Header,
-    InputGroup,
-    InputText,
-    Button,
-    IconQuestionmark,
-    IconSave,
-  },
-
-  data: () => ({
-    token: "",
-  }),
-
-  mounted() {
-    this.token = this.preferences.api_token;
-  },
-
-  methods: {
-    save() {
-      this.setToken(this.token);
-      this.$router.push({ name: 'tracking' })
+    name: "Preferences",
+    components: {
+        Header,
+        InputGroup,
+        InputText,
+        Button,
+        IconQuestionmark,
+        IconSave,
     },
 
-    ...mapActions(["setToken"]),
-  },
+    data: () => ({
+        token: "",
+    }),
 
-  computed: mapState(["preferences"]),
+    mounted() {
+        this.token = this.preferences.api_token;
+    },
+
+    methods: {
+        save() {
+            this.setToken(this.token);
+            this.$router.push({ name: 'tracking' })
+        },
+
+        ...mapActions(["setToken"]),
+    },
+
+    computed: mapState(["preferences"]),
 };
 </script>

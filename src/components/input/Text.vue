@@ -18,10 +18,10 @@
 
 <script>
 export default {
-  name: "InputText",
-  props: {
-    value: { String, required: true },
-    addOn: { String, required: false },
-  },
+    name: "InputText",
+    props: {
+        value: { String, required: true },
+        addOn: { String, required: false },
+    },
 };
 </script>

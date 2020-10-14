@@ -26,18 +26,18 @@ import Bordered from "./../layout/Bordered";
 import IconCog from "./../icons/Cog";
 
 export default {
-  name: "Tracking",
-  components: {
-    MainNavigation,
-    Header,
-    Bordered,
-    IconCog
-  },
+    name: "Tracking",
+    components: {
+        MainNavigation,
+        Header,
+        Bordered,
+        IconCog
+    },
 
-  methods: {
-    ...mapActions(["setToken"]),
-  },
+    methods: {
+        ...mapActions(["setToken"]),
+    },
 
-  computed: mapState(["preferences"]),
+    computed: mapState(["preferences"]),
 };
 </script>
