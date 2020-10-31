@@ -15,9 +15,9 @@
 
 <script>
 export default {
-  name: 'InputGroup',
-  props: {
-    label: { String, required: false },
-  },
+    name: 'InputGroup',
+    props: {
+        label: { String, required: false },
+    },
 };
 </script>

@@ -7,28 +7,28 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 
-  state: {
-    preferences: {
-      api_token: 'scoot'
-    }
-  },
+    state: {
+        preferences: {
+            api_token: ''
+        }
+    },
 
-  actions: {
-    setToken(store, token) {
-        store.commit('setToken', token)
-    }
-  },
+    actions: {
+        setToken(store, token) {
+            store.commit('setToken', token)
+        }
+    },
 
-  mutations: {
-    setToken(state, token) {
-      state.preferences.api_token = token
-    }
-  },
+    mutations: {
+        setToken(state, token) {
+            state.preferences.api_token = token
+        }
+    },
 
-  plugins: [
-    createPersistedState(),
-    createSharedMutations()
-  ],
+    plugins: [
+        createPersistedState(),
+        createSharedMutations()
+    ],
 
-  strict: process.env.NODE_ENV !== "production"
+    strict: process.env.NODE_ENV !== "production"
 })

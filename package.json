@@ -14,23 +14,34 @@
   "main": "background.js",
   "dependencies": {
     "@tailwindcss/ui": "^0.6.2",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "menubar": "^9.0.1",
-    "tailwindcss": "^1.9.0",
+    "tailwindcss": "^1.9.6",
     "vue": "^2.6.11",
-    "vue-router": "^3.4.6",
+    "vue-router": "^3.4.7",
     "vuex": "^3.5.1",
     "vuex-electron": "^1.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-plugin-babel": "^4.5.8",
+    "@vue/cli-plugin-eslint": "^4.5.8",
+    "@vue/cli-service": "^4.5.8",
     "babel-eslint": "^10.1.0",
     "electron": "^9.0.0",
     "electron-devtools-installer": "^3.1.0",
-    "eslint": "^6.7.2",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.1.2",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.4",
     "vue-template-compiler": "^2.6.11"
   },
@@ -46,7 +57,12 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ]
+    }
   },
   "browserslist": [
     "> 1%",
